@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guillermo Gómez | Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="container header-container">
+        <h1 class="logo">Guillermo Gómez</h1>
+        <nav>
+          <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+          <ul class="nav-list" id="navList">
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#education">Formación</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="about" class="container">
+        <div class="about-content">
+          <h2>Presentación Personal</h2>
+          <p>Mi nombre es Guillermo Gómez, soy desarrollador fullstack Java, estudiante en la Escuela de Negocios Incade, poseo experiencia en el desarrollo de aplicaciones web. Me enfoco en lograr códigos de calidad que sean sostenibles en el tiempo. Me apasiona aprender nuevas tecnologías y aplicar mis conocimientos para ayudar a otros a alcanzar sus objetivos.</p>
+        </div>
+      </section>
+
+      <section id="education" class="container">
+        <h2>Formación</h2>
+        <ul class="education-list">
+          <li>
+            <h3>Estudiante de Tecniccatura Superiror en Programación e Inovación</h3>
+            <p>INCADE (2025 - actualidad)</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="skills" class="container">
+        <h2>Habilidades</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Habilidades Duras</h3>
+            <ul>
+              <li>HTML5 / CSS3 / JavaScript (ES6+)</li>
+              <li>React.js & Componentes Modernos</li>
+              <li>Control de Versiones (Git & GitHub)</li>
+              <li>Diseño Responsivo & CSS Grid/Flexbox</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Habilidades Blandas</h3>
+            <ul>
+              <li>Trabajo en equipo y colaboración</li>
+              <li>Resolución de problemas analíticos</li>
+              <li>Comunicación técnica efectiva</li>
+              <li>Adaptabilidad y aprendizaje continuo</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="container">
+        <h2>Proyectos</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>E-commerce Dashboard</h3>
+            <p>Panel de administración moderno construido con componentes interactivos para la gestión de inventario y
+              métricas de ventas.</p>
+            <a href="https://github.com/usuario/ecommerce-dashboard" target="_blank" rel="noopener">Ver Repositorio</a>
+          </div>
+          <div class="project-card">
+            <h3>App de Clima en Tiempo Real</h3>
+            <p>Aplicación web que consume una API meteorológica externa ofreciendo pronósticos detallados y un diseño
+              adaptable.</p>
+            <a href="https://github.com/usuario/weather-app" target="_blank" rel="noopener">Ver Repositorio</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="container">
+        <h2>Contacto</h2>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required placeholder="Tu nombre">
+          </div>
+          <div class="form-group">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" required placeholder="tu@correo.com">
+          </div>
+          <div class="form-group">
+            <label for="message">Contenido del mensaje</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Escribe tu mensaje aquí..."></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 Guillermo Gómez. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
