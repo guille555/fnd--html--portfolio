@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guillermo Gomez | Portfolio</title>
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <a href="index.html" class="logo">Panel ABML Portfolio</a>
+        <nav class="admin-nav">
+          <a href="lista.html" class="btn btn-secondary">Listado</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <section>
+        <h2>Cargar Nuevo Proyecto</h2>
+        <form id="createForm" class="admin-form">
+          <div class="form-group">
+            <label for="title">Nombre del Proyecto</label>
+            <input type="text" id="title" name="title" required placeholder="Nombre descriptivo">
+          </div>
+
+          <div class="form-group">
+            <label for="description">Descripción</label>
+            <textarea id="description" name="description" rows="4" required placeholder="Detalles de la aplicación..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="repoUrl">Enlace de GitHub</label>
+            <input type="url" id="repoUrl" name="repoUrl" required placeholder="https://github.com/usuario/repo">
+          </div>
+
+          <div class="form-buttons">
+            <a href="lista.html" class="btn btn-secondary">volver</a>
+            <button type="button" id="clearFormBtn" class="btn btn-secondary">limpiar</button>
+            <button type="submit" class="btn">guardar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- Diálogo modal oculto para mensajes de respuesta del servidor -->
+    <dialog id="responseDialog">
+      <div class="dialog-content">
+        <h3 id="dialogTitle">¡Éxito!</h3>
+        <p id="dialogMessage">El proyecto se ha registrado correctamente.</p>
+        <button id="closeDialogBtn" class="btn">Aceptar</button>
+      </div>
+    </dialog>
+
+    <script src="js/nuevo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+.proyecto_descripcion {
+  margin-top: 0.75rem;
+}
+
+.proyecto_url {
+  color: var(--primary-color);
+  font-weight: 500;
+  text-decoration: none;
+}

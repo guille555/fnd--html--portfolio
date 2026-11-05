@@ -1,9 +1,10 @@
 const JSON_SERVER_URL = "http://localhost:8591/proyectos";
 
 export type Proyecto = {
-  id: number,
+  id: string,
   nombre: string,
   descripcion: string,
+  url: string,
   tecnologias: Array<String>,
   visibilidad: boolean
 };
@@ -11,6 +12,11 @@ export type Proyecto = {
 export class PortfolioService {
   async getAll(): Promise<Proyecto[]> {
     const resultado = await fetch("http://localhost:8591/proyectos");
+    return resultado.json();
+  }
+
+  async getProyecto(id: string): Promise<Proyecto> {
+    const resultado = await fetch(`http://localhost:8591/proyectos/${id}`);
     return resultado.json();
   }
 
@@ -36,7 +42,7 @@ export class PortfolioService {
     return resultado.json();
   }
 
-  async delete(id: number): Promise<Proyecto> {
+  async delete(id: string): Promise<Proyecto> {
     const resultado = await fetch(`http://localhost:8591/proyectos/${id}`, {
       method: "DELETE"
     });

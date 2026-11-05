@@ -1,11 +1,19 @@
 {
   "proyectos": [
     {
-      "id": 1,
-      "nombre": "javafx-log",
-      "descripcion": "Proto-desktop journal application built with Java 25 and JavaFX (FXML). Features a multi-tier architecture, Java NIO API for file management, and a modular design.",
-      "tecnologia": [ "java 25", "javafx", "CSS" ],
-      "visibilidad": "true"
+      "nombre": "pry 01",
+      "descripcion": "desc",
+      "url": "http://url.git",
+      "visibilidad": true,
+      "id": "txlBB1vuuWQ"
+    },
+    {
+      "nombre": "pry 02",
+      "descripcion": "descr",
+      "url": "http://url.git",
+      "visibilidad": false,
+      "id": "y30yeYpv0y8"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

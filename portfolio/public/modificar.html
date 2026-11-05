@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guillermo Gomez | Portfolio</title>
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <a href="index.html" class="logo">Panel ABML Portfolio</a>
+        <nav class="admin-nav">
+          <a href="lista.html" class="btn btn-secondary">Listado</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <section>
+        <h2>Modificar Proyecto</h2>
+        <form id="editForm" class="admin-form">
+          <input type="hidden" id="projectId">
+          <div class="form-group">
+            <label for="title">Nombre del Proyecto</label>
+            <input type="text" id="title" name="title" required>
+          </div>
+          <div class="form-group">
+            <label for="description">Descripción</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="repoUrl">Enlace de GitHub</label>
+            <input type="url" id="repoUrl" name="repoUrl" required>
+          </div>
+          <!-- Campo desplegable que representa la visibilidad del proyecto -->
+          <div class="form-group">
+            <label for="visibilidad">Visibilidad</label>
+            <select id="visibilidad" name="visibilidad">
+              <option value="true">Público</option>
+              <option value="false">Privado</option>
+            </select>
+          </div>
+          <div class="form-buttons">
+            <a href="lista.html" class="btn btn-secondary">volver</a>
+            <button type="button" id="clearEditBtn" class="btn btn-secondary">limpiar</button>
+            <button type="submit" class="btn">guardar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <dialog id="responseDialog">
+      <div class="dialog-content">
+        <h3 id="dialogTitle">¡Modificado!</h3>
+        <p id="dialogMessage">Los cambios se guardaron correctamente.</p>
+        <button id="closeDialogBtn" class="btn">Aceptar</button>
+      </div>
+    </dialog>
+    <script src="js/modificar.js"></script>
+  </body>
+</html>

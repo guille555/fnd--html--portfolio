@@ -2,11 +2,11 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "private": true,
   "scripts": {
     "run:db": "json-server src/db/db.json --port 8591",
-    "dev": "tsx src/server.ts",
-    "build": "tsc"
+    "run:svr": "node src/server.ts"
   },
   "keywords": [],
   "author": "Guillermo Gómez",

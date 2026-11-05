@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guillermo Gomez | Portfolio</title>
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="css/tarjeta.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <a href="index.html" class="logo">Panel ABML Portfolio</a>
+        <nav class="admin-nav">
+          <a href="lista.html" class="btn">Listado</a>
+          <a href="nuevo.html" class="btn btn-secondary">Nuevo Proyecto</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <section>
+        <h2>Listado de Proyectos</h2>
+        <div class="filter-panel">
+          <div class="filter-group">
+            <label for="filterName">Filtrar por nombre</label>
+            <input type="text" id="filterName" placeholder="Ej. E-commerce...">
+          </div>
+          <div class="filter-group">
+            <label for="filterStatus">Estado del proyecto</label>
+            <select id="filterStatus">
+              <option value="true">público</option>
+              <option value="false">privado</option>
+            </select>
+          </div>
+          <div class="filter-buttons" style="display: flex; gap: 0.5rem;">
+            <input type="button" value="Buscar" id="searchBtn" class="btn">
+            <input type="button" value="Limpiar" id="clearBtn" class="btn btn-secondary">
+          </div>
+        </div>
+        <!-- Contenedor del listado en tarjetas -->
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Las tarjetas se cargan dinámicamente mediante JS -->
+        </div>
+      </section>
+    </main>
+    <!-- Diálogo Modal de Confirmación de Eliminación -->
+    <dialog id="deleteDialog">
+      <div class="dialog-content">
+        <h3>¿Estás seguro de eliminar este proyecto?</h3>
+        <p>Esta acción no se puede deshacer.</p>
+        <div class="dialog-actions">
+          <button id="confirmDeleteYes" class="btn btn-danger">Sí</button>
+          <button id="confirmDeleteNo" class="btn btn-secondary">No</button>
+        </div>
+      </div>
+    </dialog>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 Guillermo Gómez. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="js/lista.js"></script>
+  </body>
+</html>
